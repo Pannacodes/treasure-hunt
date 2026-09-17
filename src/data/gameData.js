@@ -12,8 +12,8 @@ export const gameData = {
     year: 1985,
   },
   coordinates: {
-    prompt: "Follow these instructions: turn the date into a pin using latitude and longitude.",
-    hint: "Day.month is one number. Century.year, your birth year split in half, is the other.",
+    prompt: "Turn the date into a pin using latitude and longitude.",
+    hint: "Day.month is one number. Your birth year split in half, is the other.",
     latitude: 21.08,
     longitude: 19.85,
     tolerance: 0.3,
@@ -29,22 +29,22 @@ export const gameData = {
   },
   cities: [
     {
-      id: "darmstadt",
-      city: "DARMSTADT",
+      id: "zendaya",
+      city: "ZENDAYA",
       prompt:
-        "Anna was born in a German city, which one?",
-      hint: "Translate 'intestine city' into German. Search on Google maps.",
-      accepted: ["darmstadt"],
-      offsets: [-2, 3, 2],
+        "I wear what I have worked on. I just got married. I am loved by the media. Who am I?",
+      hint: "Odysseus... Dune...",
+      accepted: ["zendaya"],
+      offsets: [-3, 1, -1],
     },
     {
-      id: "firenze",
-      city: "FIRENZE",
+      id: "carilleras",
+      city: "CARILLERAS",
       prompt:
-        "This city is the cradle of an entire cultural era. Anna travels back every time she can.",
-      hint: "Renaissance. Write the city in its native language.",
-      accepted: ["firenze", "florence"],
-      offsets: [1, 2, 0],
+        "What is the dish I know how to cook well and have had many requests for?",
+      hint: "I tried this meal early on in our relationship.",
+      accepted: ["carilleras", "carrilleras"],
+      offsets: [-2, -1, 3],
     },
     {
       id: "montpellier",
@@ -53,7 +53,7 @@ export const gameData = {
         "Anna and Dani drove nearby this city but never visited, although he has heard lots about it.",
       hint: "Go check the things on Anna's fridge.",
       accepted: ["montpellier"],
-      offsets: [3, 7, -2],
+      offsets: [3, -2, 0],
     },
   ],
   destination: "LANZAROTE",
@@ -81,8 +81,7 @@ export const gameData = {
   },
   finalRiddle: {
     activityPrompt: "Salt on your skin, wind at your back, waves that never stop moving. Born from a volcano's fire, what activity waits where the water goes calm?",
-    durationPrompt: "How long will this activity last?",
-    durationHint: "This number has already appeared in the game. It is the number of letters in the place you found on Google Maps.",
+    durationPrompt: "What number have you used throughout this quiz?",
     finalPrompt: "Something with fins waits where the water goes calm. What exactly are we doing for your birthday?",
     acceptedActivity: [
       "whale",
@@ -111,7 +110,7 @@ export const gameData = {
   },
   reveal: {
     heading: "Treasure unlocked",
-    body: "An ethical whale-watching tour off the Lanzarote coast, for your birthday.",
+    body: "A whale-watching tour off the Lanzarote coast!",
     details: [
       "Electric catamaran: quiet and low-impact",
       "4-hour morning tour",

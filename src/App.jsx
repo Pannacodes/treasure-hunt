@@ -214,7 +214,6 @@ export default function App() {
         evidence={[
           { label: "Google Maps location", value: gameData.chad.word },
           { label: "Letters in that location", value: String(positionNumber) },
-          { label: "Letters collected", value: collectedLetters.join(" ") },
           { label: "Island", value: gameData.destination },
           {
             label: "Surroundings",
