@@ -12,9 +12,8 @@ export default function GameLayout({
   return (
     <main className="game-shell">
       <section className="game-panel">
-        <p className="eyebrow">
-          Exhibit {String(step + 1).padStart(2, "0")}
-        </p>
+        <img className="compass-logo" src="/mark.svg" alt="" />
+        <p className="eyebrow">Exhibit {String(step + 1).padStart(2, "0")}</p>
         <h1>{title}</h1>
         <p className="subtitle">{subtitle}</p>
         <ProgressBar current={step} total={totalSteps} />
