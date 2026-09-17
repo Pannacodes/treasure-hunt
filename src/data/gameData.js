@@ -1,24 +1,122 @@
 export const gameData = {
   title: "A treasure hunt for Dani",
-
+  subtitle: "A few clues. One very good surprise.",
   physical: {
-    frenchPhrase: "...",
-    prompt: "...",
-    accepted: ["21.08"],
+    heading: "The date that started it all",
+    frenchPhrase: "Le nombre qui a tout commencé.",
+    translation: "The number that started it all.",
+    prompt: "What number brought you to this game?",
+    hint: "It is a date you know very well.",
+    day: 21,
+    month: 8,
+    year: 1985,
   },
-
   coordinates: {
-    targetLat: 21.08,
-    targetLng: 19.85,
+    prompt: "Follow these instructions: turn the date into a pin using latitude and longitude.",
+    hint: "Day.month is one number. Century.year, your birth year split in half, is the other.",
+    latitude: 21.08,
+    longitude: 19.85,
+    tolerance: 0.3,
     revealedWord: "CHAD",
+    countPrompt: "How many letters are in that word?",
   },
-
+  chad: {
+    prompt: "Open Google Maps and look closely at the place where your pin landed. Enter its name, one letter at a time.",
+    word: "CHAD",
+  },
+  transition: {
+    prompt: "Do not forget this word. You will need it very soon.",
+  },
   cities: [
     {
       id: "darmstadt",
       city: "DARMSTADT",
-      prompt: "...",
+      prompt:
+        "Anna was born in a German city, which one?",
+      hint: "Translate 'intestine city' into German. Search on Google maps.",
       accepted: ["darmstadt"],
+      offsets: [-2, 3, 2],
+    },
+    {
+      id: "firenze",
+      city: "FIRENZE",
+      prompt:
+        "This city is the cradle of an entire cultural era. Anna travels back every time she can.",
+      hint: "Renaissance. Write the city in its native language.",
+      accepted: ["firenze", "florence"],
+      offsets: [1, 2, 0],
+    },
+    {
+      id: "montpellier",
+      city: "MONTPELLIER",
+      prompt:
+        "Anna and Dani drove nearby this city but never visited, although he has heard lots about it.",
+      hint: "Go check the things on Anna's fridge.",
+      accepted: ["montpellier"],
+      offsets: [3, 7, -2],
     },
   ],
+  destination: "LANZAROTE",
+  quiz: {
+    questions: [
+      {
+        prompt: "Lanzarote has flats where seawater evaporates in the sun, leaving white crystal fields behind. What are they made of?",
+        accepted: ["salt"],
+        word: "SALT",
+        french: "sel",
+      },
+      {
+        prompt: "Surfers flock here for one weather feature that never seems to stop blowing across the island. What is it?",
+        accepted: ["wind"],
+        word: "WIND",
+        french: "vent",
+      },
+      {
+        prompt: "The Atlantic never sits still around Lanzarote's black rock coast. What keeps crashing against it?",
+        accepted: ["waves"],
+        word: "WAVES",
+        french: "vagues",
+      },
+    ],
+  },
+  finalRiddle: {
+    activityPrompt: "Salt on your skin, wind at your back, waves that never stop moving. Born from a volcano's fire, what activity waits where the water goes calm?",
+    durationPrompt: "How long will this activity last?",
+    durationHint: "This number has already appeared in the game. It is the number of letters in the place you found on Google Maps.",
+    finalPrompt: "Something with fins waits where the water goes calm. What exactly are we doing for your birthday?",
+    acceptedActivity: [
+      "whale",
+      "whales",
+      "whale watching",
+      "whale-watching",
+      "dolphin",
+      "dolphins",
+      "dolhin",
+      "dolhins",
+      "ballena",
+      "ballenas",
+      "delfin",
+      "delfines",
+      "avistamiento de ballenas",
+      "observar ballenas",
+    ],
+    acceptedPhrase: ["whale watching", "whale-watching", "whales", "watching whales"],
+    acceptedDuration: 4,
+    hints: [
+      "Hint 1: You already found the place. -> Lanzarote.",
+      "Hint 2: You already found three things that describe your surroundings. -> salt / waves / wind.",
+      "Hint 3: You won't be listening to music.",
+      "Hint 4: The final answer is an activity, not an object.",
+    ],
+  },
+  reveal: {
+    heading: "Treasure unlocked",
+    body: "An ethical whale-watching tour off the Lanzarote coast, for your birthday.",
+    details: [
+      "Electric catamaran: quiet and low-impact",
+      "4-hour morning tour",
+      "Onboard hydrophones, so we can actually hear them",
+      "Run by a marine research organisation",
+    ],
+  },
 };
