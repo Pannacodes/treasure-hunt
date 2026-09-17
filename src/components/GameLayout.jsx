@@ -13,7 +13,7 @@ export default function GameLayout({
     <main className="game-shell">
       <section className="game-panel">
         <p className="eyebrow">
-          Step {step + 1} of {totalSteps}
+          Exhibit {String(step + 1).padStart(2, "0")}
         </p>
         <h1>{title}</h1>
         <p className="subtitle">{subtitle}</p>

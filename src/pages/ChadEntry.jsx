@@ -19,6 +19,7 @@ export default function ChadEntry({ data, onComplete, onWrong }) {
 
   return (
     <>
+    <div className="chad-entry">
       <p className="prompt">{data.prompt}</p>
       <div className="input-row chad-inputs">
         {letters.map((letter, index) => (
@@ -35,6 +36,7 @@ export default function ChadEntry({ data, onComplete, onWrong }) {
       <button className="primary-button" onClick={submit}>
         Check the word
       </button>
+      </div>
     </>
   );
 }

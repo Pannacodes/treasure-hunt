@@ -26,23 +26,26 @@ export default function FinalRiddle({
 
   return (
     <>
-      <p className="prompt">
-        You have collected every letter you need. Put them in order to name the
-        island.
-      </p>
-      <LetterTiles letters={answer} onRemove={remove} />
-      <div className="letter-bank">
-        {bank.map((letter, index) => (
-          <button key={`${letter}-${index}`} onClick={() => add(index)}>
-            {letter}
+      <div className="final-riddle">
+        <p className="eyebrow">Exhibit / Destination</p>
+        <p className="prompt">
+          You have collected every letter you need. Put them in order to name
+          it.
+        </p>
+        <LetterTiles letters={answer} onRemove={remove} />
+        <div className="letter-bank">
+          {bank.map((letter, index) => (
+            <button key={`${letter}-${index}`} onClick={() => add(index)}>
+              {letter}
+            </button>
+          ))}
+        </div>
+        {solved && (
+          <button className="primary-button" onClick={onComplete}>
+            Continue
           </button>
-        ))}
+        )}
       </div>
-      {solved && (
-        <button className="primary-button" onClick={onComplete}>
-          Continue
-        </button>
-      )}
     </>
   );
 }

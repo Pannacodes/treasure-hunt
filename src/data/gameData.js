@@ -1,10 +1,8 @@
 export const gameData = {
   title: "A treasure hunt for Dani",
-  subtitle: "A few clues. One very good surprise.",
+  subtitle: "If you get stuck, ask Anna.",
   physical: {
     heading: "The date that started it all",
-    frenchPhrase: "Le nombre qui a tout commencé.",
-    translation: "The number that started it all.",
     prompt: "What number brought you to this game?",
     hint: "It is a date you know very well.",
     day: 21,
@@ -12,7 +10,7 @@ export const gameData = {
     year: 1985,
   },
   coordinates: {
-    prompt: "Turn the date into a pin using latitude and longitude.",
+    prompt: "Turn the date into latitude and longitude.",
     hint: "Day.month is one number. Your birth year split in half, is the other.",
     latitude: 21.08,
     longitude: 19.85,
@@ -21,7 +19,8 @@ export const gameData = {
     countPrompt: "How many letters are in that word?",
   },
   chad: {
-    prompt: "Open Google Maps and look closely at the place where your pin landed. Enter its name, one letter at a time.",
+    prompt:
+      "Open Google Maps and input '21.08, 19.85' to look closely at the place where your pin landed. Enter its name, one letter at a time.",
     word: "CHAD",
   },
   transition: {
@@ -32,8 +31,8 @@ export const gameData = {
       id: "zendaya",
       city: "ZENDAYA",
       prompt:
-        "I wear what I have worked on. I just got married. I am loved by the media. Who am I?",
-      hint: "Odysseus... Dune...",
+        "I wear what I have worked on. I just got married. Spiderman loves me. Who am I?",
+      hint: "Odyssey... Dune...",
       accepted: ["zendaya"],
       offsets: [-3, 1, -1],
     },
@@ -41,8 +40,8 @@ export const gameData = {
       id: "carilleras",
       city: "CARILLERAS",
       prompt:
-        "What is the dish I know how to cook well and have had many requests for?",
-      hint: "I tried this meal early on in our relationship.",
+        "What is the dish you know how to cook well and have had many requests for? Friends and family!",
+      hint: "Anna tried this meal early on in your relationship.",
       accepted: ["carilleras", "carrilleras"],
       offsets: [-2, -1, 3],
     },
@@ -60,19 +59,22 @@ export const gameData = {
   quiz: {
     questions: [
       {
-        prompt: "Lanzarote has flats where seawater evaporates in the sun, leaving white crystal fields behind. What are they made of?",
+        prompt:
+          "Lanzarote has flats where seawater evaporates in the sun, leaving white crystal fields behind. What are they made of?",
         accepted: ["salt"],
         word: "SALT",
         french: "sel",
       },
       {
-        prompt: "Surfers flock here for one weather feature that never seems to stop blowing across the island. What is it?",
+        prompt:
+          "Surfers flock here for one weather feature that never seems to stop blowing across the island. What is it?",
         accepted: ["wind"],
         word: "WIND",
         french: "vent",
       },
       {
-        prompt: "The Atlantic never sits still around Lanzarote's black rock coast. What keeps crashing against it?",
+        prompt:
+          "The Atlantic never sits still around Lanzarote's black rock coast. What keeps crashing against it?",
         accepted: ["waves"],
         word: "WAVES",
         french: "vagues",
@@ -80,9 +82,9 @@ export const gameData = {
     ],
   },
   finalRiddle: {
-    activityPrompt: "Salt on your skin, wind at your back, waves that never stop moving. Born from a volcano's fire, what activity waits where the water goes calm?",
     durationPrompt: "What number have you used throughout this quiz?",
-    finalPrompt: "Something with fins waits where the water goes calm. What exactly are we doing for your birthday?",
+    finalPrompt:
+      "Four hours. We leave with the morning. We move quietly. We listen more than we speak. No map can show exactly where we will find it. And what we hope to find isn't something you can simply see from land.",
     acceptedActivity: [
       "whale",
       "whales",
@@ -90,8 +92,6 @@ export const gameData = {
       "whale-watching",
       "dolphin",
       "dolphins",
-      "dolhin",
-      "dolhins",
       "ballena",
       "ballenas",
       "delfin",
@@ -99,7 +99,7 @@ export const gameData = {
       "avistamiento de ballenas",
       "observar ballenas",
     ],
-    acceptedPhrase: ["whale watching", "whale-watching", "whales", "watching whales"],
+
     acceptedDuration: 4,
     hints: [
       "Hint 1: You already found the place. -> Lanzarote.",
@@ -114,8 +114,9 @@ export const gameData = {
     details: [
       "Electric catamaran: quiet and low-impact",
       "4-hour morning tour",
-      "Onboard hydrophones, so we can actually hear them",
-      "Run by a marine research organisation",
+      "Onboard hydrophones, so we can actually hear the whales and dolphins",
+      "Run by a marine research organisation (recommended by Mark and Laetitia!)",
     ],
+    website: "https://wewhale.co",
   },
 };
